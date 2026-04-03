@@ -8,20 +8,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"/>
 <style>
 :root{
-  --bg:#050a05;
-  --surface:#0a110a;
-  --card:#0f180f;
-  --border:#1a2e1a;
-  --green:#00e87a;
-  --green2:#00c45e;
-  --amber:#f5a623;
-  --red:#ff4040;
-  --blue:#00c8ff;
-  --text:#e8f5e8;
-  --muted:#7a9e7a;
-  --font-head:'Syne',sans-serif;
-  --font-mono:'DM Mono',monospace;
-  --font-body:'DM Sans',sans-serif;
+  --bg:#050a05;--surface:#0a110a;--card:#0f180f;--border:#1a2e1a;
+  --green:#00e87a;--green2:#00c45e;--amber:#f5a623;--red:#ff4040;--blue:#00c8ff;
+  --text:#e8f5e8;--muted:#7a9e7a;
+  --font-head:'Syne',sans-serif;--font-mono:'DM Mono',monospace;--font-body:'DM Sans',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -29,8 +19,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);overflo
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px;}
-
-/* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(5,10,5,0.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .nav-logo{font-family:var(--font-head);font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;color:var(--green);}
 .nav-logo span{color:var(--text);}
@@ -39,12 +27,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .nav-links a:hover{color:var(--green);}
 .nav-cta{background:var(--green);color:#000;font-family:var(--font-mono);font-size:.8rem;font-weight:500;padding:9px 20px;border:none;cursor:pointer;letter-spacing:.05em;transition:all .2s;}
 .nav-cta:hover{background:var(--green2);}
-
-/* ── PAGES ── */
-.page{display:none;}
-.page.active{display:block;}
-
-/* ── HERO ── */
+.page{display:none;}.page.active{display:block;}
 #landing{min-height:100vh;padding-top:72px;}
 .hero{position:relative;min-height:calc(100vh - 72px);display:flex;align-items:center;padding:0 40px;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 50%,rgba(0,232,122,0.07) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 80% 20%,rgba(0,200,255,0.04) 0%,transparent 60%);}
@@ -62,14 +45,10 @@ h1 .accent{color:var(--green);}
 .btn-primary:hover{background:var(--green2);transform:translateY(-1px);}
 .btn-secondary{background:transparent;color:var(--text);font-family:var(--font-head);font-weight:600;font-size:.9rem;padding:14px 32px;border:1px solid var(--border);cursor:pointer;transition:all .2s;}
 .btn-secondary:hover{border-color:var(--green);color:var(--green);}
-
-/* ── IMPACT STRIP ── */
 .impact-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 .impact-item{text-align:center;padding:20px;}
 .impact-num{font-family:var(--font-head);font-size:2.4rem;font-weight:800;color:var(--green);letter-spacing:-0.04em;line-height:1;}
 .impact-label{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-top:6px;}
-
-/* ── SECTIONS ── */
 .section{padding:80px 40px;}
 .section-tag{font-family:var(--font-mono);font-size:.7rem;color:var(--green);text-transform:uppercase;letter-spacing:.15em;margin-bottom:12px;}
 .section-title{font-family:var(--font-head);font-size:2.2rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:40px;}
@@ -77,7 +56,6 @@ h1 .accent{color:var(--green);}
 .ps-card{background:var(--surface);padding:40px;border:1px solid var(--border);}
 .ps-card.problem{border-left:4px solid var(--red);}
 .ps-card.solution{border-left:4px solid var(--green);}
-.ps-icon{font-size:2rem;margin-bottom:16px;}
 .ps-card h3{font-family:var(--font-head);font-size:1.3rem;font-weight:700;margin-bottom:12px;}
 .ps-card p{color:var(--muted);line-height:1.7;font-size:.9rem;}
 .ps-card ul{color:var(--muted);line-height:2;font-size:.9rem;list-style:none;margin-top:12px;}
@@ -88,8 +66,6 @@ h1 .accent{color:var(--green);}
 .how-num{font-family:var(--font-head);font-size:4rem;font-weight:800;color:rgba(0,232,122,0.08);line-height:1;margin-bottom:16px;position:absolute;top:20px;right:20px;}
 .how-step h4{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin-bottom:10px;}
 .how-step p{color:var(--muted);font-size:.85rem;line-height:1.6;}
-
-/* ── MAP ── */
 .map-section{padding:80px 40px;background:var(--surface);}
 .map-container{position:relative;height:400px;background:var(--card);border:1px solid var(--border);overflow:hidden;margin-top:40px;}
 .map-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(0,232,122,0.03) 0%,transparent 100%);background-color:#060d06;}
@@ -104,8 +80,6 @@ h1 .accent{color:var(--green);}
 .map-legend{position:absolute;bottom:20px;right:20px;background:rgba(0,0,0,.8);border:1px solid var(--border);padding:16px;font-family:var(--font-mono);font-size:.7rem;}
 .legend-item{display:flex;align-items:center;gap:8px;margin-bottom:6px;color:var(--muted);}
 .legend-dot{width:8px;height:8px;border-radius:50%;}
-
-/* ── PRODUCTS ── */
 .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px;}
 .product-card{background:var(--surface);padding:32px;transition:background .2s;}
 .product-card:hover{background:var(--card);}
@@ -113,8 +87,6 @@ h1 .accent{color:var(--green);}
 .product-card h4{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:8px;}
 .product-card p{color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:16px;}
 .product-badge{font-family:var(--font-mono);font-size:.65rem;color:var(--green);border:1px solid rgba(0,232,122,0.3);padding:4px 10px;display:inline-block;}
-
-/* ── ADMIN ── */
 #admin{padding-top:72px;min-height:100vh;}
 .admin-header{padding:28px 40px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 .admin-title{font-family:var(--font-head);font-size:1.4rem;font-weight:800;}
@@ -124,8 +96,6 @@ h1 .accent{color:var(--green);}
 .status-pill.online .dot{background:var(--green);}
 .status-pill.warning .dot{background:var(--amber);}
 .status-pill.critical .dot{background:var(--red);animation:pulse .8s infinite;}
-
-/* ── MQTT STATUS BAR ── */
 .mqtt-bar{background:var(--card);border-bottom:1px solid var(--border);padding:10px 40px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
 .mqtt-indicator{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:.7rem;}
 .mqtt-dot{width:8px;height:8px;border-radius:50%;background:#444;transition:background .3s;}
@@ -135,19 +105,15 @@ h1 .accent{color:var(--green);}
 .mqtt-label{color:var(--muted);}
 .mqtt-label span{color:var(--text);}
 .mqtt-hub-pills{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto;}
-.mqtt-hub-pill{font-family:var(--font-mono);font-size:.62rem;padding:3px 8px;border:1px solid var(--border);color:var(--muted);transition:all .3s;}
+.mqtt-hub-pill{font-family:var(--font-mono);font-size:.62rem;padding:3px 8px;border:1px solid var(--border);color:var(--muted);transition:all .4s;}
 .mqtt-hub-pill.live{border-color:rgba(0,232,122,.4);color:var(--green);}
 .mqtt-hub-pill.sim{border-color:rgba(245,166,35,.3);color:var(--amber);}
-
-/* ── ADMIN GRID ── */
 .admin-body{padding:32px 40px;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto auto;gap:20px;}
 .admin-card{background:var(--surface);border:1px solid var(--border);padding:24px;}
 .admin-card.full{grid-column:1/-1;}
 .admin-card.half{grid-column:span 2;}
 .card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
 .card-title{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
-
-/* ── HUB CARDS ── */
 .hubs-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .hub-card{background:var(--card);border:1px solid var(--border);padding:18px;position:relative;overflow:hidden;transition:border-color .3s;}
 .hub-card.critical{border-color:var(--red)!important;background:rgba(255,64,64,0.06);}
@@ -155,7 +121,7 @@ h1 .accent{color:var(--green);}
 .hub-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
 .hub-name{font-family:var(--font-head);font-size:.95rem;font-weight:700;}
 .hub-loc{font-family:var(--font-mono);font-size:.62rem;color:var(--muted);margin-top:2px;}
-.hub-source{font-family:var(--font-mono);font-size:.58rem;padding:2px 6px;border:1px solid;margin-top:4px;display:inline-block;}
+.hub-source{font-family:var(--font-mono);font-size:.58rem;padding:2px 6px;border:1px solid;margin-top:4px;display:inline-block;transition:all .5s;}
 .hub-source.live{color:var(--green);border-color:rgba(0,232,122,.3);}
 .hub-source.sim{color:var(--amber);border-color:rgba(245,166,35,.3);}
 .hub-state{font-family:var(--font-mono);font-size:.65rem;padding:3px 8px;border:1px solid;}
@@ -164,32 +130,24 @@ h1 .accent{color:var(--green);}
 @keyframes flash{from{opacity:1;}to{opacity:.4;}}
 .hub-state.warning-s{color:var(--amber);border-color:rgba(245,166,35,.4);}
 .sensor-row{display:flex;gap:12px;margin-bottom:10px;}
-.sensor{flex:1;background:var(--surface);padding:10px;text-align:center;}
+.sensor{flex:1;background:var(--surface);padding:10px;text-align:center;transition:background .4s;}
 .sensor-val{font-family:var(--font-head);font-size:1.2rem;font-weight:700;transition:color .4s;}
 .sensor-val.hot{color:var(--red);}
 .sensor-val.warm{color:var(--amber);}
 .sensor-val.ok{color:var(--green);}
 .sensor-key{font-family:var(--font-mono);font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:2px;}
-
-/* flash animation when new MQTT data arrives */
-@keyframes dataFlash{0%{background:rgba(0,232,122,.15);}100%{background:var(--surface);}}
-.sensor.updated{animation:dataFlash .6s ease;}
-
+@keyframes dataFlash{0%{background:rgba(0,232,122,.25);}100%{background:var(--surface);}}
+.sensor.updated{animation:dataFlash .8s ease forwards;}
 .progress-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:10px;}
 .progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .5s;}
 .progress-fill.hot{background:var(--red);}
 .batch-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
 .batch-label{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
 .batch-pct{font-family:var(--font-mono);font-size:.7rem;color:var(--green);}
-
-/* dispatch row */
 .dispatch-row{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);}
 .dispatch-nums{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:.65rem;color:var(--muted);margin-bottom:5px;}
-.dispatch-nums span:last-child{color:var(--green);}
 .dispatch-track{height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
-.dispatch-fill{height:100%;background:var(--green);border-radius:2px;transition:width .5s;}
-
-/* ── ALERT LOG ── */
+.dispatch-fill{height:100%;border-radius:2px;transition:width .5s;}
 .alert-log{max-height:220px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;}
 .alert-entry{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;background:var(--card);border-left:3px solid;}
 .alert-entry.critical{border-color:var(--red);}
@@ -200,15 +158,11 @@ h1 .accent{color:var(--green);}
 .alert-msg.critical{color:var(--red);}
 .alert-msg.warning{color:var(--amber);}
 .alert-msg.info{color:var(--green);}
-
-/* ── IMPACT LIVE ── */
 .impact-live-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);}
 .impact-live-item{background:var(--card);padding:20px;text-align:center;}
 .ilv-num{font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:var(--green);}
 .ilv-label{font-family:var(--font-mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;}
 .ilv-delta{font-family:var(--font-mono);font-size:.65rem;color:var(--green);margin-top:2px;}
-
-/* ── BATCHES ── */
 .batches-list{display:flex;flex-direction:column;gap:8px;}
 .batch-item{display:flex;align-items:center;gap:16px;background:var(--card);padding:12px 16px;border:1px solid var(--border);}
 .batch-id{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);min-width:90px;}
@@ -217,23 +171,17 @@ h1 .accent{color:var(--green);}
 .batch-bar{height:100%;background:var(--green);border-radius:3px;transition:width .5s;}
 .batch-pct2{font-family:var(--font-mono);font-size:.7rem;color:var(--green);min-width:40px;text-align:right;}
 .batch-eta{font-family:var(--font-mono);font-size:.65rem;color:var(--muted);}
-
-/* ── CRISIS BTN ── */
 .crisis-btn{background:rgba(255,64,64,0.1);border:1px solid rgba(255,64,64,0.4);color:var(--red);font-family:var(--font-mono);font-size:.75rem;padding:10px 20px;cursor:pointer;letter-spacing:.05em;transition:all .2s;}
 .crisis-btn:hover{background:rgba(255,64,64,0.2);}
 .crisis-btn.active{background:rgba(255,64,64,0.25);animation:borderPulse 1s infinite;}
 @keyframes borderPulse{0%,100%{border-color:rgba(255,64,64,.4);}50%{border-color:rgba(255,64,64,1);}}
 .reset-btn{background:rgba(0,232,122,0.1);border:1px solid rgba(0,232,122,0.4);color:var(--green);font-family:var(--font-mono);font-size:.75rem;padding:10px 20px;cursor:pointer;letter-spacing:.05em;margin-left:8px;}
 .reset-btn:hover{background:rgba(0,232,122,0.2);}
-
-/* ── ALERT OVERLAY ── */
 .alert-overlay{display:none;position:fixed;top:80px;right:20px;z-index:2000;background:rgba(255,64,64,0.1);border:1px solid var(--red);padding:20px 24px;max-width:320px;backdrop-filter:blur(10px);}
 .alert-overlay.show{display:block;animation:slideInRight .3s ease;}
 @keyframes slideInRight{from{transform:translateX(120%);opacity:0;}to{transform:translateX(0);opacity:1;}}
 .alert-overlay h4{font-family:var(--font-head);font-size:.95rem;color:var(--red);margin-bottom:6px;}
 .alert-overlay p{font-family:var(--font-mono);font-size:.72rem;color:var(--text);line-height:1.5;}
-
-/* ── MARKETPLACE ── */
 #marketplace{padding-top:72px;min-height:100vh;}
 .market-header{padding:28px 40px;border-bottom:1px solid var(--border);}
 .market-body{padding:32px 40px;display:grid;grid-template-columns:1fr 320px;gap:32px;align-items:start;}
@@ -282,28 +230,17 @@ h1 .accent{color:var(--green);}
 .reading-val{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:var(--green);}
 .reading-key{font-family:var(--font-mono);font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;}
 .reading-note{font-family:var(--font-mono);font-size:.6rem;color:var(--green);margin-top:2px;}
-
-/* ── FOOTER ── */
 footer{padding:40px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
 footer .foot-logo{font-family:var(--font-head);font-size:1.1rem;font-weight:800;color:var(--green);}
 footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
 .divider{height:1px;background:var(--border);margin:0 40px;}
-
 @media(max-width:900px){
-  .admin-body{grid-template-columns:1fr;}
-  .hubs-grid{grid-template-columns:1fr;}
-  .catalog-grid{grid-template-columns:1fr 1fr;}
-  .market-body{grid-template-columns:1fr;}
-  .ps-grid{grid-template-columns:1fr;}
-  .how-grid{grid-template-columns:1fr 1fr;}
-  .impact-strip{grid-template-columns:1fr 1fr;}
-  .impact-live-grid{grid-template-columns:1fr 1fr;}
-  .hero{padding:0 20px;}
-  .section{padding:60px 20px;}
-  nav{padding:16px 20px;}
-  .admin-header{padding:20px;}
-  .admin-body{padding:20px;}
-  .mqtt-bar{padding:10px 20px;}
+  .admin-body{grid-template-columns:1fr;}.hubs-grid{grid-template-columns:1fr;}
+  .catalog-grid{grid-template-columns:1fr 1fr;}.market-body{grid-template-columns:1fr;}
+  .ps-grid{grid-template-columns:1fr;}.how-grid{grid-template-columns:1fr 1fr;}
+  .impact-strip{grid-template-columns:1fr 1fr;}.impact-live-grid{grid-template-columns:1fr 1fr;}
+  .hero{padding:0 20px;}.section{padding:60px 20px;}nav{padding:16px 20px;}
+  .admin-header{padding:20px;}.admin-body{padding:20px;}.mqtt-bar{padding:10px 20px;}
 }
 </style>
 </head>
@@ -314,7 +251,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
   <p id="alertMsg">Sensor threshold exceeded.<br>Check system log for details.</p>
 </div>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">Agri<span>Loop</span> <span style="color:var(--muted);font-size:.7rem;font-family:var(--font-mono)">BioSystems</span></div>
   <ul class="nav-links">
@@ -326,11 +262,10 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
   <button class="nav-cta" onclick="showPage('admin')">Command Center →</button>
 </nav>
 
-<!-- ══════════════ LANDING ══════════════ -->
+<!-- LANDING -->
 <div id="landing" class="page active">
   <div class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
+    <div class="hero-bg"></div><div class="hero-grid"></div>
     <div class="hero-content">
       <div class="hero-tag">🌿 Hult Prize 2026 — Decentralized Bio-Manufacturing</div>
       <h1>Turning <span class="accent">Crop Waste</span> Into Climate Infrastructure</h1>
@@ -341,31 +276,20 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       </div>
     </div>
   </div>
-
   <div class="impact-strip" id="impact-anchor">
     <div class="impact-item"><div class="impact-num" id="cnt-hubs">0</div><div class="impact-label">Active Hubs Online</div></div>
     <div class="impact-item"><div class="impact-num" id="cnt-waste">0<span style="font-size:1.2rem">kg</span></div><div class="impact-label">Waste Diverted</div></div>
     <div class="impact-item"><div class="impact-num" id="cnt-farmers">0</div><div class="impact-label">Farmers Empowered</div></div>
     <div class="impact-item"><div class="impact-num" id="cnt-co2">0<span style="font-size:1.2rem">kg</span></div><div class="impact-label">CO₂ Avoided</div></div>
   </div>
-
   <div class="section">
     <div class="section-tag">The Challenge</div>
     <div class="section-title">Two Crises. One Solution.</div>
     <div class="ps-grid">
-      <div class="ps-card problem">
-        <h3>The Burning Problem</h3>
-        <p>Every harvest season, millions of tons of crop residue are burned because removal is expensive and time-sensitive. The result:</p>
-        <ul><li>Catastrophic air quality in India</li><li>PM2.5 spikes 10× above safe limits</li><li>Soil degradation from repeated burning</li><li>No economic incentive to stop</li></ul>
-      </div>
-      <div class="ps-card solution">
-        <h3>The AgriLoop Solution</h3>
-        <p>We turn residue into revenue. Farmers deposit waste into our nearby hubs and get paid per kilogram. The hubs do the rest:</p>
-        <ul><li>Mycelium grows on biomass in 5–7 days</li><li>IoT sensors guarantee batch quality</li><li>Molded into biodegradable packaging</li><li>Zero landfill. Zero burn. Full circle.</li></ul>
-      </div>
+      <div class="ps-card problem"><h3>The Burning Problem</h3><p>Every harvest season, millions of tons of crop residue are burned because removal is expensive and time-sensitive. The result:</p><ul><li>Catastrophic air quality in India</li><li>PM2.5 spikes 10× above safe limits</li><li>Soil degradation from repeated burning</li><li>No economic incentive to stop</li></ul></div>
+      <div class="ps-card solution"><h3>The AgriLoop Solution</h3><p>We turn residue into revenue. Farmers deposit waste into our nearby hubs and get paid per kilogram. The hubs do the rest:</p><ul><li>Mycelium grows on biomass in 5–7 days</li><li>IoT sensors guarantee batch quality</li><li>Molded into biodegradable packaging</li><li>Zero landfill. Zero burn. Full circle.</li></ul></div>
     </div>
   </div>
-
   <div class="divider"></div>
   <div class="section">
     <div class="section-tag">The Process</div>
@@ -377,7 +301,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       <div class="how-step"><div class="how-num">04</div><h4>Delivered to B2B Clients</h4><p>Products ship to e-commerce firms, electronics brands, and FMCG companies as certified biodegradable replacements for thermocol and foam.</p></div>
     </div>
   </div>
-
   <div class="map-section">
     <div class="section-tag">Hub Network</div>
     <div class="section-title">Decentralized by Design</div>
@@ -401,7 +324,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       </div>
     </div>
   </div>
-
   <div class="section">
     <div class="section-tag">Product Range</div>
     <div class="section-title">Replacing Thermocol, Permanently</div>
@@ -414,7 +336,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       <div class="product-card"><div class="product-icon">🔥</div><h4>Bio-Pellets (Fuel)</h4><p>Residual biomass compressed into high-calorific bio-pellets for industrial furnaces.</p><div class="product-badge">By ton / industrial</div></div>
     </div>
   </div>
-
   <footer>
     <div class="foot-logo">AgriLoop BioSystems</div>
     <p>Hult Prize 2026 · Decentralized Mycelium Infrastructure</p>
@@ -422,7 +343,7 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
   </footer>
 </div>
 
-<!-- ══════════════ ADMIN ══════════════ -->
+<!-- ADMIN -->
 <div id="admin" class="page">
   <div class="admin-header">
     <div>
@@ -438,24 +359,20 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       </div>
     </div>
   </div>
-
-  <!-- MQTT STATUS BAR -->
   <div class="mqtt-bar">
     <div class="mqtt-indicator">
       <div class="mqtt-dot connecting" id="mqttDot"></div>
       <span class="mqtt-label">MQTT: <span id="mqttStatus">Connecting to broker.hivemq.com...</span></span>
     </div>
     <div class="mqtt-hub-pills" id="mqttHubPills">
-      <span class="mqtt-hub-pill" id="pill-hub01">HUB01 SIM</span>
-      <span class="mqtt-hub-pill" id="pill-hub02">HUB02 SIM</span>
-      <span class="mqtt-hub-pill" id="pill-hub03">HUB03 SIM</span>
-      <span class="mqtt-hub-pill" id="pill-hub04">HUB04 SIM</span>
-      <span class="mqtt-hub-pill" id="pill-hub05">HUB05 SIM</span>
+      <span class="mqtt-hub-pill sim" id="pill-hub01">HUB01 SIM</span>
+      <span class="mqtt-hub-pill sim" id="pill-hub02">HUB02 SIM</span>
+      <span class="mqtt-hub-pill sim" id="pill-hub03">HUB03 SIM</span>
+      <span class="mqtt-hub-pill sim" id="pill-hub04">HUB04 SIM</span>
+      <span class="mqtt-hub-pill sim" id="pill-hub05">HUB05 SIM</span>
     </div>
   </div>
-
   <div class="admin-body">
-    <!-- HUB CARDS -->
     <div class="admin-card half">
       <div class="card-header">
         <div class="card-title">Live Hub Status</div>
@@ -463,8 +380,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       </div>
       <div class="hubs-grid" id="hubsGrid"></div>
     </div>
-
-    <!-- ALERT LOG -->
     <div class="admin-card">
       <div class="card-header">
         <div class="card-title">System Log</div>
@@ -472,8 +387,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       </div>
       <div class="alert-log" id="alertLog"></div>
     </div>
-
-    <!-- IMPACT LIVE -->
     <div class="admin-card full">
       <div class="card-header">
         <div class="card-title">Live Impact Metrics</div>
@@ -486,8 +399,6 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
         <div class="impact-live-item"><div class="ilv-num" id="lv-co2">1.24 t</div><div class="ilv-label">CO₂ Avoided (Today)</div><div class="ilv-delta">Equivalent: 62 trees</div></div>
       </div>
     </div>
-
-    <!-- PRODUCTION BATCHES -->
     <div class="admin-card full">
       <div class="card-header">
         <div class="card-title">Active Production Batches</div>
@@ -498,7 +409,7 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
   </div>
 </div>
 
-<!-- ══════════════ MARKETPLACE ══════════════ -->
+<!-- MARKETPLACE -->
 <div id="marketplace" class="page">
   <div class="market-header">
     <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.1em;">B2B Order Portal</div>
@@ -519,12 +430,12 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
       <div class="track-section">
         <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;">Track My Growth</div>
         <div class="track-input-row">
-          <input type="text" id="trackInput" placeholder="Enter your Growth Tracking Number (e.g. AGL-2024-0047)"/>
+          <input type="text" id="trackInput" placeholder="Enter your Growth Tracking Number (e.g. AGL-2026-0049)"/>
           <button onclick="trackOrder()">Track →</button>
         </div>
         <div class="track-result" id="trackResult">
           <div class="track-header">
-            <div class="track-id" id="trackId">AGL-2024-0047</div>
+            <div class="track-id" id="trackId">AGL-2026-0049</div>
             <div class="track-status">COLONIZING — Day 4 of 7</div>
           </div>
           <div class="track-stages">
@@ -535,7 +446,7 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
             <div class="stage"><div class="stage-name">Quality</div><div class="stage-val">—</div></div>
             <div class="stage"><div class="stage-name">Dispatch</div><div class="stage-val">~2d</div></div>
           </div>
-          <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--muted);margin-bottom:10px;">Live readings from Hub #03 — Ludhiana (growing your batch now)</div>
+          <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--muted);margin-bottom:10px;">Live readings from Hub #01 — Palakkad (your ESP32 hub)</div>
           <div class="live-readings">
             <div class="reading"><div class="reading-val" id="tr-temp">24.1°C</div><div class="reading-key">Temperature</div><div class="reading-note">✓ Optimal</div></div>
             <div class="reading"><div class="reading-val" id="tr-hum">78%</div><div class="reading-key">Humidity</div><div class="reading-note">✓ Optimal</div></div>
@@ -563,84 +474,121 @@ footer p{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);}
   </div>
 </div>
 
-<!-- MQTT.js from CDN -->
 <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-
 <script>
 // ══════════════════════════════════════════════
 // HUB STATE
 // ══════════════════════════════════════════════
 const HUBS = [
-  {id:'hub01',num:'01',name:'Hub #01',loc:'Palakkad, Kerala',temp:23.4,hum:76,batch:'Batch #201',pct:92,dispatched:380,total:420,dispatchStatus:'transit',isLive:false},
-  {id:'hub02',num:'02',name:'Hub #02',loc:'Thrissur, Kerala',temp:24.1,hum:79,batch:'Batch #202',pct:78,dispatched:310,total:310,dispatchStatus:'delivered',isLive:false},
-  {id:'hub03',num:'03',name:'Hub #03',loc:'Ludhiana, Punjab',temp:22.8,hum:73,batch:'Batch #203',pct:64,dispatched:190,total:275,dispatchStatus:'transit',isLive:false},
-  {id:'hub04',num:'04',name:'Hub #04',loc:'Varanasi, UP',temp:25.6,hum:82,batch:'Batch #204',pct:85,dispatched:290,total:390,dispatchStatus:'transit',isLive:false},
-  {id:'hub05',num:'05',name:'Hub #05',loc:'Bhopal, MP',temp:23.9,hum:77,batch:'Batch #205',pct:41,dispatched:215,total:215,dispatchStatus:'delivered',isLive:false},
+  {id:'hub01',num:'01',name:'Hub #01',loc:'Palakkad, Kerala', temp:23.4,hum:76,batch:'Batch #201',pct:92,dispatched:380,total:420,dispatchStatus:'transit',  isLive:false},
+  {id:'hub02',num:'02',name:'Hub #02',loc:'Thrissur, Kerala', temp:24.1,hum:79,batch:'Batch #202',pct:78,dispatched:310,total:310,dispatchStatus:'delivered', isLive:false},
+  {id:'hub03',num:'03',name:'Hub #03',loc:'Ludhiana, Punjab', temp:22.8,hum:73,batch:'Batch #203',pct:64,dispatched:190,total:275,dispatchStatus:'transit',  isLive:false},
+  {id:'hub04',num:'04',name:'Hub #04',loc:'Varanasi, UP',     temp:25.6,hum:82,batch:'Batch #204',pct:85,dispatched:290,total:390,dispatchStatus:'transit',  isLive:false},
+  {id:'hub05',num:'05',name:'Hub #05',loc:'Bhopal, MP',       temp:23.9,hum:77,batch:'Batch #205',pct:41,dispatched:215,total:215,dispatchStatus:'delivered', isLive:false},
 ];
 
 // ══════════════════════════════════════════════
-// MQTT SETUP
+// MQTT
 // ══════════════════════════════════════════════
-const BROKER_URL = 'wss://broker.hivemq.com:8884/mqtt';
+const BROKER_URL = 'wss://broker.emqx.io:8084/mqtt';
 const TOPIC_PREFIX = 'agriloop-2026';
-// Change this string if you want a private channel
-// Use the same prefix in your Arduino sketches
 
-let mqttClient = null;
-let mqttConnected = false;
+let mqttClient = null, mqttConnected = false;
 
-function initMQTT() {
-  try {
-    mqttClient = mqtt.connect(BROKER_URL, {
-      clientId: 'agriloop-dashboard-' + Math.random().toString(16).slice(2,8),
-      reconnectPeriod: 3000,
-      connectTimeout: 8000,
-    });
-
-    mqttClient.on('connect', () => {
-      mqttConnected = true;
-      document.getElementById('mqttDot').className = 'mqtt-dot connected';
-      document.getElementById('mqttStatus').textContent = 'Connected · broker.hivemq.com · Listening for ESP32 data';
-      addLog('info', 'MQTT connected to broker.hivemq.com — awaiting ESP32 sensors');
-
-      // Subscribe to all hub topics
-      HUBS.forEach(h => {
-        mqttClient.subscribe(`${TOPIC_PREFIX}/${h.id}/temp`);
-        mqttClient.subscribe(`${TOPIC_PREFIX}/${h.id}/hum`);
-        mqttClient.subscribe(`${TOPIC_PREFIX}/${h.id}/status`);
-      });
-    });
-
-    mqttClient.on('message', (topic, payload) => {
-      const val = payload.toString();
-      const parts = topic.split('/'); // [prefix, hubId, key]
-      if (parts.length < 3) return;
-      const hubId = parts[1];
-      const key   = parts[2];
-      handleMQTTMessage(hubId, key, val);
-    });
-
-    mqttClient.on('error', (err) => {
-      document.getElementById('mqttDot').className = 'mqtt-dot error';
-      document.getElementById('mqttStatus').textContent = 'Broker error — running on simulation';
-    });
-
-    mqttClient.on('offline', () => {
-      mqttConnected = false;
-      document.getElementById('mqttDot').className = 'mqtt-dot error';
-      document.getElementById('mqttStatus').textContent = 'Disconnected — running on simulation';
-    });
-
-    mqttClient.on('reconnect', () => {
-      document.getElementById('mqttDot').className = 'mqtt-dot connecting';
-      document.getElementById('mqttStatus').textContent = 'Reconnecting...';
-    });
-
-  } catch(e) {
-    document.getElementById('mqttStatus').textContent = 'MQTT unavailable — simulation mode active';
-  }
+// FIX A: Larger client ID entropy to avoid broker-side session collisions.
+// The public HiveMQ broker will kick an existing session if a new client
+// connects with the same ID, silently stopping message delivery.
+function makeDashClientId() {
+  return 'agriloop-dash-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 }
 
+function initMQTT() {
+  // Try HiveMQ first, fall back handled by error event
+  const BROKERS = [
+    'wss://broker.emqx.io:8084/mqtt',       // ← same broker as ESP32
+    'wss://broker.hivemq.com:8884/mqtt',    // fallback
+  ];
+  let brokerIndex = 0;
+ 
+  function tryConnect() {
+    const url = BROKERS[brokerIndex % BROKERS.length];
+    console.log('[MQTT] Connecting to', url);
+    setMQTTDot('connecting', 'Connecting to ' + url.split('/')[2] + '...');
+ 
+    try {
+      mqttClient = mqtt.connect(url, {
+        clientId:        'agriloop-dash-' + Date.now().toString(36) + Math.random().toString(36).slice(2,8),
+        reconnectPeriod: 0,      // we handle reconnect manually below
+        connectTimeout:  8000,
+        keepalive:       30,
+        clean:           true,
+      });
+ 
+      mqttClient.on('connect', () => {
+        mqttConnected = true;
+        console.log('[MQTT] Connected to', url);
+        setMQTTDot('connected', 'Connected · ' + url.split('/')[2] + ' · Listening for ESP32');
+        addLog('info', 'MQTT connected — subscribing to agriloop-2026/+/+');
+ 
+        mqttClient.subscribe('agriloop-2026/+/+', { qos: 0 }, (err, granted) => {
+          if (err) {
+            console.error('[MQTT] Subscribe failed:', err);
+            addLog('warning', 'Subscribe failed: ' + err.message);
+          } else {
+            console.log('[MQTT] Subscribed:', granted);
+            addLog('info', 'Subscribed OK — waiting for hub01 data on agriloop-2026/hub01/temp');
+          }
+        });
+      });
+ 
+      mqttClient.on('message', (topic, payload) => {
+        const raw = payload.toString().trim();
+        console.log('[MQTT] Message:', topic, '→', raw);   // ← KEY: watch this in DevTools
+        const parts = topic.split('/');
+        if (parts.length < 3) return;
+        handleMQTTMessage(parts[1], parts[2], raw);
+      });
+ 
+      mqttClient.on('error', (e) => {
+        console.error('[MQTT] Error:', e);
+        setMQTTDot('error', 'Error on ' + url.split('/')[2] + ' — trying fallback');
+        addLog('warning', 'Broker error — switching broker');
+        mqttClient.end(true);
+        brokerIndex++;
+        setTimeout(tryConnect, 2000);
+      });
+ 
+      mqttClient.on('offline', () => {
+        mqttConnected = false;
+        console.warn('[MQTT] Offline');
+        setMQTTDot('connecting', 'Reconnecting...');
+        mqttClient.end(true);
+        setTimeout(tryConnect, 3000);
+      });
+ 
+      mqttClient.on('close', () => {
+        console.warn('[MQTT] Connection closed');
+      });
+ 
+    } catch(e) {
+      console.error('[MQTT] Exception:', e);
+      setMQTTDot('error', 'MQTT exception — simulation active');
+    }
+  }
+ 
+  tryConnect();
+}
+
+function setMQTTDot(cls, msg) {
+  const d = document.getElementById('mqttDot');
+  const s = document.getElementById('mqttStatus');
+  if (d) d.className    = 'mqtt-dot ' + cls;
+  if (s) s.textContent  = msg;
+}
+
+// ══════════════════════════════════════════════
+// HANDLE INCOMING MQTT MESSAGE
+// ══════════════════════════════════════════════
 function handleMQTTMessage(hubId, key, val) {
   const hub = HUBS.find(h => h.id === hubId);
   if (!hub) return;
@@ -652,11 +600,13 @@ function handleMQTTMessage(hubId, key, val) {
     const t = parseFloat(val);
     if (!isNaN(t)) {
       hub.temp = t;
-      flashSensor(`temp-${hub.num}`);
-      // Threshold alerts
+      // FIX E: flashSensor needs the sensor-val element's id, which is
+      // "temp-01", "temp-02", etc. hub.num is already zero-padded ('01').
+      // This was correct in the original but here we make it explicit.
+      flashSensor('temp-' + hub.num);
       if (t >= 30) {
-        addLog('critical', `🚨 TEMP CRITICAL: ${hub.name} — ${t.toFixed(1)}°C (threshold: 30°C)`);
-        showOverlay(`${hub.name}: Temperature at ${t.toFixed(1)}°C — Critical threshold breached`);
+        addLog('critical', `🚨 TEMP CRITICAL: ${hub.name} — ${t.toFixed(1)}°C`);
+        showOverlay(`${hub.name}: ${t.toFixed(1)}°C — Critical threshold breached`);
       } else if (t >= 27) {
         addLog('warning', `⚠ Temp warning: ${hub.name} — ${t.toFixed(1)}°C`);
       }
@@ -667,117 +617,177 @@ function handleMQTTMessage(hubId, key, val) {
     const h2 = parseFloat(val);
     if (!isNaN(h2)) {
       hub.hum = h2;
-      flashSensor(`hum-${hub.num}`);
-      if (h2 >= 85) addLog('critical', `🚨 HUMIDITY CRITICAL: ${hub.name} — ${h2.toFixed(0)}%`);
-      else if (h2 >= 80) addLog('warning', `⚠ Humidity high: ${hub.name} — ${h2.toFixed(0)}%`);
+      flashSensor('hum-' + hub.num);
+      if (h2 >= 85)      addLog('critical', `🚨 HUMIDITY CRITICAL: ${hub.name} — ${h2.toFixed(0)}%`);
+      else if (h2 >= 80) addLog('warning',  `⚠ Humidity high: ${hub.name} — ${h2.toFixed(0)}%`);
     }
   }
 
   if (key === 'status') {
     hub.mqttStatus = val;
+    addLog('info', `📡 ESP32 handshake: ${hub.name} — firmware online (${val})`);
+    updateHubCard(hub); // force card refresh so LIVE badge shows immediately
   }
-
-  // Mark pill as live
-  const pill = document.getElementById(`pill-${hubId}`);
-  if (pill) {
-    pill.textContent = `HUB${hub.num} LIVE`;
-    pill.className = 'mqtt-hub-pill live';
-  }
+  
+  if (key === 'status') {
+    const hub = HUBS.find(h => h.id === hubId);
+    if (!hub) return;
+    
+    if (val === 'CRITICAL') {
+        hub.temp = 31.0; // force card into red state
+        addLog('critical', `🚨 ESP32 STATUS: ${hub.name} → CRITICAL`);
+        showOverlay(`${hub.name}: CRITICAL — Auto-cooling engaged`);
+        document.getElementById('hubStatusPill').className = 'status-pill critical';
+        document.getElementById('hubStatusText').textContent = 'ALERT: ' + hub.name + ' Critical';
+    } else if (val === 'WARNING') {
+        hub.temp = 27.5; // force card into amber
+        addLog('warning', `⚠ ESP32 STATUS: ${hub.name} → WARNING`);
+    } else if (val === 'OPTIMAL') {
+        // only reset if not in manual crisis
+        if (!crisisActive) {
+            hub.temp = 24.0;
+            addLog('info', `✅ ESP32 STATUS: ${hub.name} → OPTIMAL`);
+            document.getElementById('hubStatusPill').className = 'status-pill online';
+            document.getElementById('hubStatusText').textContent = '5/5 Hubs Active';
+        }
+    }
+    updateHubCard(hub);
+}
 
   if (!wasLive) {
-    addLog('info', `📡 ESP32 connected: ${hub.name} — live sensor data active`);
+    addLog('info', `📡 ESP32 live data started: ${hub.name}`);
+    // FIX G: update the top-bar pill immediately when a hub goes live,
+    // not just when the card re-renders. This was the main reason the pill
+    // stayed "SIM" — updateHubCard only ran on the next sim tick.
+    const pill = document.getElementById('pill-' + hub.id);
+    if (pill) { pill.textContent = `HUB${hub.num} LIVE`; pill.className = 'mqtt-hub-pill live'; }
+  }
+
+  // Mirror hub01 live readings to the marketplace tracking panel
+  if (hub.id === 'hub01') {
+    const te = document.getElementById('tr-temp');
+    const he = document.getElementById('tr-hum');
+    if (te) te.textContent = hub.temp.toFixed(1) + '°C';
+    if (he) he.textContent = Math.round(hub.hum) + '%';
   }
 
   updateHubCard(hub);
 }
 
-function flashSensor(id) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const parent = el.closest('.sensor');
-  if (!parent) return;
-  parent.classList.remove('updated');
-  void parent.offsetWidth;
-  parent.classList.add('updated');
+// ══════════════════════════════════════════════
+// FLASH — finds .sensor wrapper by sensor-val id
+// ══════════════════════════════════════════════
+function flashSensor(valId) {
+  const valEl = document.getElementById(valId);
+  if (!valEl) return;
+  const sensorDiv = valEl.closest('.sensor');
+  if (!sensorDiv) return;
+  sensorDiv.classList.remove('updated');
+  void sensorDiv.offsetWidth; // force reflow so animation restarts
+  sensorDiv.classList.add('updated');
 }
 
 // ══════════════════════════════════════════════
-// SIMULATION (runs for hubs not yet live)
+// SIMULATION — only nudges hubs that aren't live
+// FIX H: check hub.isLive before nudging so a live
+// hub's real data is never overwritten by simulation.
 // ══════════════════════════════════════════════
-function nudge(val, min, max, dec=1) {
-  return Math.max(min, Math.min(max, val + (Math.random()-0.5)*0.6));
-}
+function nudge(v, lo, hi) { return Math.max(lo, Math.min(hi, v + (Math.random() - .5) * .6)); }
 
-function getTempClass(t) { return t>=30?'hot':t>=27?'warm':'ok'; }
-function getHubStateClass(h) { return h.temp>=30?'critical-s':h.temp>=27?'warning-s':'online'; }
-function getHubStateLabel(h) { return h.temp>=30?'CRITICAL':h.temp>=27?'WARNING':'ONLINE'; }
-function getCardClass(h) { return h.temp>=30?'critical':h.temp>=27?'warning':''; }
-function getDispatchLabel(s) { return {pending:'PENDING',transit:'IN TRANSIT',delivered:'DELIVERED'}[s]||s.toUpperCase(); }
-function getDispatchColor(s) { return s==='delivered'?'var(--green)':s==='transit'?'var(--amber)':'var(--muted)'; }
+let crisisActive = false;
 
 setInterval(() => {
   if (crisisActive) return;
   HUBS.forEach(hub => {
-    if (!hub.isLive) {
+    if (!hub.isLive) { // FIX H: skip simulation for live ESP32 hubs
       hub.temp = nudge(hub.temp, 22, 26.5);
-      hub.hum  = Math.round(nudge(hub.hum, 70, 84, 0));
+      hub.hum  = Math.round(nudge(hub.hum, 70, 84));
     }
     updateHubCard(hub);
   });
-  // update tracking panel with hub03 data
-  const h3 = HUBS[2];
-  const trTemp = document.getElementById('tr-temp');
-  const trHum  = document.getElementById('tr-hum');
-  if (trTemp) trTemp.textContent = h3.temp.toFixed(1)+'°C';
-  if (trHum)  trHum.textContent  = Math.round(h3.hum)+'%';
+  const h1 = HUBS[0];
+  if (!h1.isLive) {
+    const te = document.getElementById('tr-temp');
+    const he = document.getElementById('tr-hum');
+    if (te) te.textContent = h1.temp.toFixed(1) + '°C';
+    if (he) he.textContent = Math.round(h1.hum) + '%';
+  }
 }, 2500);
 
-// Batch progress
 setInterval(() => {
-  HUBS.forEach(hub => {
-    if (hub.pct < 99) hub.pct = Math.min(99, hub.pct + 0.04);
-  });
+  HUBS.forEach(h => { if (h.pct < 99) h.pct = Math.min(99, h.pct + .04); });
   renderBatches();
 }, 8000);
 
-// Impact counters
 let wasteNum = 847, incNum = 38200;
 setInterval(() => {
-  wasteNum += Math.random() < 0.35 ? parseFloat((Math.random()*0.4).toFixed(1)) : 0;
-  incNum   += Math.random() < 0.12 ? 50 : 0;
-  const lw = document.getElementById('lv-waste');
-  const li = document.getElementById('lv-income');
-  if (lw) lw.textContent = wasteNum.toFixed(1)+' kg';
-  if (li) li.textContent = '₹'+incNum.toLocaleString('en-IN');
+  wasteNum += Math.random() < .35 ? parseFloat((Math.random() * .4).toFixed(1)) : 0;
+  incNum   += Math.random() < .12 ? 50 : 0;
+  const lw = document.getElementById('lv-waste'), li = document.getElementById('lv-income');
+  if (lw) lw.textContent = wasteNum.toFixed(1) + ' kg';
+  if (li) li.textContent = '₹' + incNum.toLocaleString('en-IN');
 }, 4000);
 
 // ══════════════════════════════════════════════
-// RENDER HUB CARD
+// HELPERS
+// ══════════════════════════════════════════════
+const getTempClass     = t   => t >= 30 ? 'hot' : t >= 27 ? 'warm' : 'ok';
+const getHubStateClass = hub => hub.temp >= 30 ? 'critical-s' : hub.temp >= 27 ? 'warning-s' : 'online';
+const getHubStateLabel = hub => hub.temp >= 30 ? 'CRITICAL' : hub.temp >= 27 ? 'WARNING' : 'ONLINE';
+const getCardClass     = hub => hub.temp >= 30 ? 'critical' : hub.temp >= 27 ? 'warning' : '';
+const getDispatchLabel = s   => ({ pending: 'PENDING', transit: 'IN TRANSIT', delivered: 'DELIVERED' }[s] || s.toUpperCase());
+const getDispatchColor = s   => s === 'delivered' ? 'var(--green)' : s === 'transit' ? 'var(--amber)' : 'var(--muted)';
+
+// ══════════════════════════════════════════════
+// UPDATE HUB CARD
+// FIX I: update hub-source label AND top pill in one place.
+// Previously the pill was only updated inside handleMQTTMessage
+// on the wasLive→live transition. Now updateHubCard always syncs
+// both elements so they stay in sync even after re-renders.
 // ══════════════════════════════════════════════
 function updateHubCard(hub) {
-  const card = document.getElementById(`hcard-${hub.num}`);
+  const card = document.getElementById('hcard-' + hub.num);
   if (!card) { renderHubs(); return; }
 
-  card.className = `hub-card ${getCardClass(hub)}`;
+  card.className = 'hub-card ' + getCardClass(hub);
 
-  const tempEl  = document.getElementById(`temp-${hub.num}`);
-  const humEl   = document.getElementById(`hum-${hub.num}`);
-  const stateEl = document.getElementById(`hstate-${hub.num}`);
-  const progEl  = document.getElementById(`prog-${hub.num}`);
-  const bpctEl  = document.getElementById(`bpct-${hub.num}`);
+  // Sync source label inside card
+  const src = card.querySelector('.hub-source');
+  if (src) {
+    src.textContent = hub.isLive ? '● ESP32 LIVE' : '◌ SIMULATED';
+    src.className   = 'hub-source ' + (hub.isLive ? 'live' : 'sim');
+  }
 
-  if (tempEl) { tempEl.textContent = hub.temp.toFixed(1)+'°C'; tempEl.className = `sensor-val ${getTempClass(hub.temp)}`; }
-  if (humEl)  { humEl.textContent  = Math.round(hub.hum)+'%'; }
-  if (stateEl){ stateEl.textContent = getHubStateLabel(hub); stateEl.className = `hub-state ${getHubStateClass(hub)}`; }
-  if (progEl) { progEl.style.width = hub.pct.toFixed(1)+'%'; progEl.className = `progress-fill ${hub.temp>=30?'hot':''}`; }
-  if (bpctEl) { bpctEl.textContent = hub.pct.toFixed(1)+'% colonized'; }
+  // Sync top-bar pill
+  const pill = document.getElementById('pill-' + hub.id);
+  if (pill) {
+    pill.textContent = `HUB${hub.num} ${hub.isLive ? 'LIVE' : 'SIM'}`;
+    pill.className   = 'mqtt-hub-pill ' + (hub.isLive ? 'live' : 'sim');
+  }
+
+  const tempEl  = document.getElementById('temp-'  + hub.num);
+  const humEl   = document.getElementById('hum-'   + hub.num);
+  const stateEl = document.getElementById('hstate-' + hub.num);
+  const progEl  = document.getElementById('prog-'  + hub.num);
+  const bpctEl  = document.getElementById('bpct-'  + hub.num);
+
+  if (tempEl)  { tempEl.textContent  = hub.temp.toFixed(1) + '°C'; tempEl.className = 'sensor-val ' + getTempClass(hub.temp); }
+  if (humEl)   { humEl.textContent   = Math.round(hub.hum) + '%'; }
+  if (stateEl) { stateEl.textContent = getHubStateLabel(hub); stateEl.className = 'hub-state ' + getHubStateClass(hub); }
+  if (progEl)  { progEl.style.width  = hub.pct.toFixed(1) + '%'; progEl.className = 'progress-fill ' + (hub.temp >= 30 ? 'hot' : ''); }
+  if (bpctEl)  { bpctEl.textContent  = hub.pct.toFixed(1) + '% colonized'; }
 }
 
+// ══════════════════════════════════════════════
+// RENDER HUBS
+// Element IDs: temp-01, hum-01, hstate-01, prog-01, bpct-01
+// These must exactly match what updateHubCard and flashSensor target.
+// ══════════════════════════════════════════════
 function renderHubs() {
   const grid = document.getElementById('hubsGrid');
   if (!grid) return;
   grid.innerHTML = HUBS.map(hub => {
-    const dispPct = Math.round((hub.dispatched / hub.total) * 100);
+    const dispPct   = Math.round(hub.dispatched / hub.total * 100);
     const remaining = hub.total - hub.dispatched;
     return `
     <div class="hub-card ${getCardClass(hub)}" id="hcard-${hub.num}">
@@ -785,25 +795,27 @@ function renderHubs() {
         <div>
           <div class="hub-name">${hub.name}</div>
           <div class="hub-loc">${hub.loc}</div>
-          <div class="hub-source ${hub.isLive?'live':'sim'}">${hub.isLive?'● ESP32 LIVE':'◌ SIMULATED'}</div>
+          <div class="hub-source ${hub.isLive ? 'live' : 'sim'}">${hub.isLive ? '● ESP32 LIVE' : '◌ SIMULATED'}</div>
         </div>
         <div class="hub-state ${getHubStateClass(hub)}" id="hstate-${hub.num}">${getHubStateLabel(hub)}</div>
       </div>
       <div class="sensor-row">
-        <div class="sensor" id="sensor-temp-${hub.num}">
+        <div class="sensor">
           <div class="sensor-val ${getTempClass(hub.temp)}" id="temp-${hub.num}">${hub.temp.toFixed(1)}°C</div>
           <div class="sensor-key">Temp</div>
         </div>
-        <div class="sensor" id="sensor-hum-${hub.num}">
+        <div class="sensor">
           <div class="sensor-val ok" id="hum-${hub.num}">${Math.round(hub.hum)}%</div>
           <div class="sensor-key">Humidity</div>
         </div>
         <div class="sensor">
-          <div class="sensor-val ok">${(Math.random()*0.3+0.8).toFixed(2)}</div>
+          <div class="sensor-val ok">${(Math.random() * .3 + .8).toFixed(2)}</div>
           <div class="sensor-key">CO₂ %</div>
         </div>
       </div>
-      <div class="progress-bar"><div class="progress-fill ${hub.temp>=30?'hot':''}" id="prog-${hub.num}" style="width:${hub.pct.toFixed(1)}%"></div></div>
+      <div class="progress-bar">
+        <div class="progress-fill ${hub.temp >= 30 ? 'hot' : ''}" id="prog-${hub.num}" style="width:${hub.pct.toFixed(1)}%"></div>
+      </div>
       <div class="batch-row">
         <div class="batch-label">${hub.batch}</div>
         <div class="batch-pct" id="bpct-${hub.num}">${hub.pct.toFixed(1)}% colonized</div>
@@ -811,12 +823,15 @@ function renderHubs() {
       <div class="dispatch-row">
         <div class="dispatch-nums">
           <span>Dispatched: <strong style="color:${getDispatchColor(hub.dispatchStatus)}">${hub.dispatched} kg</strong></span>
-          <span style="color:var(--muted)">Remaining: ${remaining} kg</span>
+          <span>Remaining: ${remaining} kg</span>
           <span style="color:${getDispatchColor(hub.dispatchStatus)}">${getDispatchLabel(hub.dispatchStatus)}</span>
         </div>
-        <div class="dispatch-track"><div class="dispatch-fill" style="width:${dispPct}%;background:${getDispatchColor(hub.dispatchStatus)}"></div></div>
+        <div class="dispatch-track">
+          <div class="dispatch-fill" style="width:${dispPct}%;background:${getDispatchColor(hub.dispatchStatus)}"></div>
+        </div>
       </div>
-    </div>`; }).join('');
+    </div>`;
+  }).join('');
 }
 renderHubs();
 
@@ -829,75 +844,55 @@ function renderBatches() {
       <div class="batch-name">${hub.name} · ${hub.loc}</div>
       <div class="batch-bar-wrap"><div class="batch-bar" style="width:${hub.pct.toFixed(1)}%"></div></div>
       <div class="batch-pct2">${hub.pct.toFixed(1)}%</div>
-      <div class="batch-eta">${hub.pct>=90?'Ready soon':'~'+Math.ceil((100-hub.pct)/8)+'h left'}</div>
+      <div class="batch-eta">${hub.pct >= 90 ? 'Ready soon' : '~' + Math.ceil((100 - hub.pct) / 8) + 'h left'}</div>
     </div>`).join('');
 }
 renderBatches();
 
 // ══════════════════════════════════════════════
-// LOG SYSTEM
+// LOG
 // ══════════════════════════════════════════════
 const logEntries = [];
 function addLog(type, msg) {
-  const log = document.getElementById('alertLog');
-  if (!log) return;
-  const time = new Date().toLocaleTimeString('en-IN', {hour12:false});
-  const entry = document.createElement('div');
-  entry.className = `alert-entry ${type}`;
-  entry.innerHTML = `<div class="alert-time">${time}</div><div class="alert-msg ${type}">${msg}</div>`;
-  log.prepend(entry);
-  logEntries.unshift({time,type,msg});
-  const lc = document.getElementById('logCount');
-  if (lc) lc.textContent = logEntries.length+' events';
+  const log = document.getElementById('alertLog'); if (!log) return;
+  const time = new Date().toLocaleTimeString('en-IN', { hour12: false });
+  const e = document.createElement('div');
+  e.className = `alert-entry ${type}`;
+  e.innerHTML = `<div class="alert-time">${time}</div><div class="alert-msg ${type}">${msg}</div>`;
+  log.prepend(e); logEntries.unshift({ time, type, msg });
+  const lc = document.getElementById('logCount'); if (lc) lc.textContent = logEntries.length + ' events';
 }
-
 function showOverlay(msg) {
-  const o = document.getElementById('alertOverlay');
-  const m = document.getElementById('alertMsg');
-  if (m) m.textContent = msg;
-  o.classList.add('show');
+  const o = document.getElementById('alertOverlay'), m = document.getElementById('alertMsg');
+  if (m) m.textContent = msg; o.classList.add('show');
   setTimeout(() => o.classList.remove('show'), 6000);
 }
-
-addLog('info', 'Command Center initialized. 5 hubs online.');
+addLog('info',    'Command Center initialized. 5 hubs online.');
 addLog('warning', 'Hub #04 Varanasi: Humidity at 82% — upper threshold.');
-addLog('info', 'Awaiting ESP32 sensor connections via MQTT...');
+addLog('info', 'Waiting for ESP32 on agriloop-2026/hub01/... via EMQX');
 
 // ══════════════════════════════════════════════
-// CRISIS SIMULATION
+// CRISIS
 // ══════════════════════════════════════════════
-let crisisActive = false;
 function triggerCrisis() {
   crisisActive = true;
   document.getElementById('crisisBtn').classList.add('active');
   document.getElementById('crisisBtn').textContent = '⚠ CRISIS ACTIVE';
   document.getElementById('resetBtn').style.display = 'inline-block';
-
-  const hub = HUBS[3]; // Hub #04
-  hub.temp = 31.8;
-  hub.hum  = 89;
-  updateHubCard(hub);
-
-  const pill = document.getElementById('hubStatusPill');
-  pill.className = 'status-pill critical';
+  const hub = HUBS[3]; hub.temp = 31.8; hub.hum = 89; updateHubCard(hub);
+  document.getElementById('hubStatusPill').className = 'status-pill critical';
   document.getElementById('hubStatusText').textContent = 'ALERT: Hub #04 Critical';
-
   addLog('critical', '🚨 TEMP SPIKE: Hub #04 Varanasi — 31.8°C detected');
   addLog('critical', '⚙ Auto-Ventilation ENGAGED — cooling protocol active');
-  addLog('warning', '📊 Humidity 89% in Hub #04 — dehumidifier activated');
-  showOverlay('Hub #04 Varanasi: Temperature spike to 31.8°C\nAuto-Ventilation Engaged. Cooling protocol initiated.');
+  addLog('warning',  '📊 Humidity 89% in Hub #04 — dehumidifier activated');
+  showOverlay('Hub #04 Varanasi: 31.8°C spike\nAuto-Ventilation Engaged.');
 }
-
 function resetCrisis() {
   crisisActive = false;
   document.getElementById('crisisBtn').classList.remove('active');
   document.getElementById('crisisBtn').textContent = '⚠ SIMULATE CRISIS';
   document.getElementById('resetBtn').style.display = 'none';
-
-  HUBS[3].temp = 25.6;
-  HUBS[3].hum  = 82;
-  updateHubCard(HUBS[3]);
-
+  HUBS[3].temp = 25.6; HUBS[3].hum = 82; updateHubCard(HUBS[3]);
   document.getElementById('hubStatusPill').className = 'status-pill online';
   document.getElementById('hubStatusText').textContent = '5/5 Hubs Active';
   addLog('info', '↺ Crisis reset. Hub #04 monitoring resumed.');
@@ -909,26 +904,22 @@ function resetCrisis() {
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  window.scrollTo(0,0);
-  if (id === 'admin' && !mqttClient) initMQTT();
+  window.scrollTo(0, 0);
+  if (id === 'admin') {
+    renderHubs();        // always re-render cards first
+    renderBatches();
+    if (!mqttClient) {
+      initMQTT();        // then connect — DOM is guaranteed ready
+    }
+  }
 }
-
-function updateTime() {
-  const el = document.getElementById('adminTime');
-  if (el) el.textContent = 'System time: '+new Date().toLocaleTimeString('en-IN',{hour12:false})+' IST · 5 hubs active';
-}
-setInterval(updateTime, 1000); updateTime();
 
 // ══════════════════════════════════════════════
 // LANDING COUNTERS
 // ══════════════════════════════════════════════
-function animateCounter(el, target, suffix='', duration=1800) {
-  let start=0, step=target/60;
-  const iv = setInterval(() => {
-    start = Math.min(start+step, target);
-    el.innerHTML = Math.floor(start) + suffix;
-    if (start >= target) clearInterval(iv);
-  }, duration/60);
+function animateCounter(el, target, suffix = '', duration = 1800) {
+  let s = 0, step = target / 60;
+  const iv = setInterval(() => { s = Math.min(s + step, target); el.innerHTML = Math.floor(s) + suffix; if (s >= target) clearInterval(iv); }, duration / 60);
 }
 setTimeout(() => {
   animateCounter(document.getElementById('cnt-hubs'), 5);
@@ -940,63 +931,56 @@ setTimeout(() => {
 // ══════════════════════════════════════════════
 // MARKETPLACE
 // ══════════════════════════════════════════════
-let selProductName='Corner Guards';
-function selectProduct(el,name,price,moq) {
-  document.querySelectorAll('.catalog-item').forEach(c=>c.classList.remove('selected'));
-  el.classList.add('selected');
-  selProductName = name;
-  document.getElementById('selProduct').value = name;
-  calcOrder();
+let selProductName = 'Corner Guards';
+function selectProduct(el, name) {
+  document.querySelectorAll('.catalog-item').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected'); selProductName = name;
+  document.getElementById('selProduct').value = name; calcOrder();
 }
-const HUB_ASSIGN=[
-  {pin:'4',hub:'Hub #02 — Thrissur, Kerala',reason:'Nearest hub to delivery pincode'},
-  {pin:'6',hub:'Hub #01 — Palakkad, Kerala',reason:'Nearest hub to delivery pincode'},
-  {pin:'1',hub:'Hub #05 — Bhopal, MP',reason:'Lowest carbon footprint route'},
-  {pin:'2',hub:'Hub #04 — Varanasi, UP',reason:'Highest current capacity match'},
-  {pin:'3',hub:'Hub #03 — Ludhiana, Punjab',reason:'Nearest hub to delivery pincode'},
+const HUB_ASSIGN = [
+  { pin: '4', hub: 'Hub #02 — Thrissur, Kerala', reason: 'Nearest hub to delivery pincode' },
+  { pin: '6', hub: 'Hub #01 — Palakkad, Kerala', reason: 'Nearest hub to delivery pincode' },
+  { pin: '1', hub: 'Hub #05 — Bhopal, MP',       reason: 'Lowest carbon footprint route' },
+  { pin: '2', hub: 'Hub #04 — Varanasi, UP',     reason: 'Highest current capacity match' },
+  { pin: '3', hub: 'Hub #03 — Ludhiana, Punjab', reason: 'Nearest hub to delivery pincode' },
 ];
-function getHub(pin){ for(const h of HUB_ASSIGN) if(pin&&pin[0]===h.pin) return h; return {hub:'Hub #03 — Ludhiana, Punjab',reason:'Default optimal routing'}; }
-function getUnitPrice(name){ const m={'Corner Guards':18,'Bottle Protectors':24,'Electronics Trays':32,'Insulation Panels':280,'Gift Packaging':45}; return m[name]||20; }
-function calcOrder(){
-  const qty=parseInt(document.getElementById('orderQty').value)||0;
-  const pin=document.getElementById('orderPin').value;
-  const result=document.getElementById('orderResult');
-  if(qty<=0){result.classList.remove('show');return;}
-  const assigned=getHub(pin);
-  const unitPrice=getUnitPrice(selProductName);
-  const total=(qty*unitPrice).toLocaleString('en-IN');
-  const co2saved=(qty*0.012).toFixed(2);
-  document.getElementById('orderHub').textContent=`→ Assigning to ${assigned.hub}`;
-  document.getElementById('orderReason').textContent=assigned.reason+' · minimum carbon footprint route selected';
-  document.getElementById('orderCO2').textContent=`🌿 CO₂ saved vs. plastic: ~${co2saved} kg | Batch ready in 7 days`;
-  document.getElementById('orderTotal').textContent=`Order total: ₹${total} (${qty} × ₹${unitPrice})`;
-  document.getElementById('orderETA').textContent=`Estimated dispatch: ${qty<=500?'7':'10'}–${qty<=500?'9':'14'} working days`;
+function getHub(pin) { for (const h of HUB_ASSIGN) if (pin && pin[0] === h.pin) return h; return { hub: 'Hub #01 — Palakkad, Kerala', reason: 'Default optimal routing' }; }
+function getUnitPrice(n) { return { 'Corner Guards': 18, 'Bottle Protectors': 24, 'Electronics Trays': 32, 'Insulation Panels': 280, 'Gift Packaging': 45 }[n] || 20; }
+function calcOrder() {
+  const qty = parseInt(document.getElementById('orderQty').value) || 0;
+  const pin = document.getElementById('orderPin').value;
+  const result = document.getElementById('orderResult');
+  if (qty <= 0) { result.classList.remove('show'); return; }
+  const assigned = getHub(pin), up = getUnitPrice(selProductName);
+  document.getElementById('orderHub').textContent    = `→ Assigning to ${assigned.hub}`;
+  document.getElementById('orderReason').textContent = assigned.reason + ' · minimum carbon footprint route selected';
+  document.getElementById('orderCO2').textContent    = `🌿 CO₂ saved vs. plastic: ~${(qty * .012).toFixed(2)} kg | Batch ready in 7 days`;
+  document.getElementById('orderTotal').textContent  = `Order total: ₹${(qty * up).toLocaleString('en-IN')} (${qty} × ₹${up})`;
+  document.getElementById('orderETA').textContent    = `Estimated dispatch: ${qty <= 500 ? '7' : '10'}–${qty <= 500 ? '9' : '14'} working days`;
   result.classList.add('show');
 }
-let orderCounter=48;
-function placeOrder(){
-  const qty=document.getElementById('orderQty').value;
-  const co=document.getElementById('orderCo').value||'Your Company';
-  if(!qty||qty<=0){alert('Please enter a quantity.');return;}
-  orderCounter++;
-  const trackNum=`AGL-2024-00${orderCounter}`;
-  const confirm=document.getElementById('orderConfirm');
-  confirm.innerHTML=`✅ ORDER CONFIRMED<br>Tracking Number: <strong>${trackNum}</strong><br>Product: ${selProductName} × ${qty} units<br>Assigned Hub: ${getHub(document.getElementById('orderPin').value).hub}<br>Company: ${co}<br><br><span style="color:var(--muted)">Use this number in "Track My Growth" to monitor your batch's live IoT readings.</span>`;
-  confirm.style.display='block';
-  document.getElementById('trackInput').value=trackNum;
+let orderCounter = 48;
+function placeOrder() {
+  const qty = document.getElementById('orderQty').value, co = document.getElementById('orderCo').value || 'Your Company';
+  if (!qty || qty <= 0) { alert('Please enter a quantity.'); return; }
+  const trackNum = `AGL-2026-00${++orderCounter}`;
+  const confirm = document.getElementById('orderConfirm');
+  confirm.innerHTML = `✅ ORDER CONFIRMED<br>Tracking Number: <strong>${trackNum}</strong><br>Product: ${selProductName} × ${qty} units<br>Assigned Hub: ${getHub(document.getElementById('orderPin').value).hub}<br>Company: ${co}<br><br><span style="color:var(--muted)">Use this number in "Track My Growth" to monitor live IoT readings.</span>`;
+  confirm.style.display = 'block';
+  document.getElementById('trackInput').value = trackNum;
 }
-function trackOrder(){
-  const val=document.getElementById('trackInput').value.trim();
-  if(!val) return;
-  document.getElementById('trackId').textContent=val;
+function trackOrder() {
+  const val = document.getElementById('trackInput').value.trim(); if (!val) return;
+  document.getElementById('trackId').textContent = val;
   document.getElementById('trackResult').classList.add('show');
-  document.getElementById('trackResult').scrollIntoView({behavior:'smooth',block:'nearest'});
+  document.getElementById('trackResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-// Auto-init MQTT when page loads on admin
+// FIX K: Auto-init MQTT if page loads directly on #admin
 window.addEventListener('load', () => {
-  const hash = window.location.hash;
-  if (hash === '#admin') { showPage('admin'); initMQTT(); }
+  if (window.location.hash === '#admin') {
+    showPage('admin');   // this calls initMQTT() internally after renderHubs()
+  }
 });
 </script>
 </body>
